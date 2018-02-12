@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+
+		<div class="panel panel-default">  
+		  <div class="panel-body">
+		 	<div class="row">
+		 		
+		 		<div class="col-md-3" *ngFor="let prod of productos ">
+		 			<h3>{{prod.nombre}}</h3>
+		 			<div >
+		 				<img  class="img-responsive img-rounded" src="img/{{prod.imagen}}">
+		 			</div>
+		 			<div >
+		 				
+		 				<p>Precio: <b>{{prod.presio}}</b></p>
+		 				<p>Unidades disponibles: <b>{{prod.stock}}</b></p>
+	
+		 			</div>
+		 			<div class="row">
+		 				<div class="col-md-4"><a class="btn btn-default">Ver mas</a></div>
+		 				<div class="col-md-4"><a class="btn btn-info" (click)="addCarrito()">Añadir</a></div>
+		 				<div class="col-md-4"><input type="number" name="cantidad" class="form-control" value="1"/>	</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		  </div>
+		</div>
+	</div>
+</div>
