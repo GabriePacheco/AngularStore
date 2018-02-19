@@ -1,17 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoService } from "../carrito.service";
 
 @Component({
   selector: 'app-barra',
   templateUrl: './barra.component.html',
-  styleUrls: ['./barra.component.css']
+  styleUrls: ['./barra.component.css'], 
+  inputs: ['totalCarritop', 'tot']
+ 
+
 })
-export class BarraComponent implements OnInit {
+export class BarraComponent  {
+	tot:number;
+	totalCarritop:number;
+	constructor (private carritos: CarritoService){
+		
 
-  constructor() { }
-
-  ngOnInit() {
-
-  }
-  carrito =0;
+	}
+	onInit (){
+		this.tot  = this.carritos.contarCarrito();
+	}
+	
+	
 
 }

@@ -1,6 +1,6 @@
 
 <div class="container-fluid "> 
-	<app-barra></app-barra>
-	<app-buscador></app-buscador>
-	<app-productos></app-productos>
+	<app-barra [tot]="totalCarritop + 1"></app-barra>
+	<app-buscador ></app-buscador>
+	<app-productos (totalCarritop) = "mostrar()"></app-productos>
 </div>		

@@ -1,3 +1,33 @@
-<p>
-  carrito works!
-</p>
+
+<div class="container-fluid "> 
+	<app-barra [tot]="totalCarritop + 1"></app-barra>
+	<div class="row">
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h3>Carrito de Compras</h3>
+					<div class="col-md-8">
+						<div class="thumbnail" *ngFor="let car of carro">
+							<div class="row" >	
+								<div class="col-md-4">
+									<img class="img-responsive " src="img/{{car.imagen}}">
+								</div>
+								<div class="col-md-8">
+									<h3>{{car.nombre}}</h3>
+									<p>Unidades : {{car.cantida}}</p>
+									<p>SubTotal : {{car.precio * car.cantida }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="h3">Total:  </div>
+						<a routerLink ="/main" class="btn btn-default">Cancelar</a>
+						<a routerLink ="" class="btn btn-default" >Pagar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>		

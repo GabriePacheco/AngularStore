@@ -12,6 +12,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { BarraComponent } from './barra/barra.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { ProductosComponent } from './productos/productos.component';
+import { CarritoService } from './carrito.service';
+import { HttpService } from './http.service';
+
 
 export const appRoutes : Routes=[
   {path: "", component: LoginComponent},
@@ -31,8 +34,7 @@ export const appRoutes : Routes=[
     BarraComponent,
     BuscadorComponent,
     ProductosComponent
-
-   
+  
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ export const appRoutes : Routes=[
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [CarritoService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
