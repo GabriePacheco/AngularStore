@@ -15,6 +15,18 @@ export class CarritoService {
  	return this.carrito;
  }
 
+ valorar(){
+ 	let total = 0;
+
+ 	for (let i of this.carrito) {
+		i = JSON.stringify(i);
+	
+		console.log(i);
+	}
+ 	return total;
+
+ }
+
 
 
 }

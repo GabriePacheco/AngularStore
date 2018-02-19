@@ -7,9 +7,11 @@ import { CarritoService } from '../carrito.service';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent {
-
+	valor : number;
   constructor(private carritoS : CarritoService) { }
   carro = this.carritoS.showCarrito();
   
-  
+  ngOnInit(){
+  	this.valor = this.carritoS.valorar();
+  }
 }

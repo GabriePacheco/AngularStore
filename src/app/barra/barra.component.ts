@@ -13,12 +13,12 @@ export class BarraComponent  {
 	tot:number;
 	totalCarritop:number;
 	constructor (private carritos: CarritoService){
-		
+	}
+	
+	  ngOnInit() {
+	  	this.tot =  this.carritos.contarCarrito();
+	  }
 
-	}
-	onInit (){
-		this.tot  = this.carritos.contarCarrito();
-	}
 	
 	
 

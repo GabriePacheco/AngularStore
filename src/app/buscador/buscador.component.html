@@ -7,9 +7,10 @@
 		 		<h2>Catálogo de productos</h2>
 		 	</div>
 		 	<div class="col-md-6">
-		 		<small>Que est´s buscando? {{buscar}}</small>
-		 		<input type="text" [ngModel]="buscar" name="buscar" class="form-control" placeholder="ingresa el nombre del producto ">
-		  </div>
+		 		<small>Que est´s buscando? {{buscardor}}</small>
+		 		<input type="text"  class="form-control" placeholder="ingresa el nombre del producto " #buscar (keyup)="onBusqueda(buscar.value)">
+		 	 </div>
+		
 		  </div>
 		</div>
 	</div>

@@ -18,7 +18,7 @@ export class ProductosComponent {
   		nombre: nomb,
   		imagen: imagen,
   		precio: precio,
-  		cantida: cantidad
+  		cantidad: cantidad
 
   	}
   	this.CarritoService.addCarrito(productoAdd);

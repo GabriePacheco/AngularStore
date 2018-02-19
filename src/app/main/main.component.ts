@@ -10,8 +10,13 @@ export class MainComponent {
 
   constructor(private carritoS: CarritoService) { }
   totalCarritop:number;
+  filtro:string;
   mostrar(){
   	this.totalCarritop = this.carritoS.contarCarrito();
+  }
+  filtar(valor){
+  	console.log(valor);
+  	
   }
 
 
