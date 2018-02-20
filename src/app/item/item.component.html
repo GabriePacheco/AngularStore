@@ -1,0 +1,23 @@
+
+<div class="container-fluid "> 
+	<app-barra [tot]="totalCarritop + 1"></app-barra>
+	<div class="container">
+		<div class="row" *ngFor="let it of item">
+			<div class="panel panel-default">
+				<div class="panel-heading"><h3 class="panel-title">{{it.nombre}} </h3></div>
+				
+				<div class="panel-body">
+					<div class="col-md-6">
+						<img class="img-responsive" src="img/{{it.imagen}}" alt="{{it.name}}">
+						<p> <a  routerLink= "/main" class="btn btn-default">Atras</a></p>
+					</div>		
+					<div class="col-md-6">
+						<p>Precio:           <strong>{{it.precio}}$</strong></p>
+						<p>Disponubles :  <strong>{{it.stock}}</strong></p>
+						<p>{{it.descripcion}}</p>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		

@@ -14,4 +14,7 @@ export class CarritoComponent {
   ngOnInit(){
   	this.valor = this.carritoS.valorar();
   }
+  onPagar(){
+  	this.carritoS.vaciar();
+  }
 }

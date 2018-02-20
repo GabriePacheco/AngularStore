@@ -1,0 +1,12 @@
+.container-fluid{
+	margin-top: 0;
+	 margin-bottom: 0;
+	 height: 80em;
+	 min-height: 100%;
+	 max-height: 100%;
+	 background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	 background: url('img/main-fondo.jpg');
+
+}

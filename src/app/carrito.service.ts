@@ -18,8 +18,12 @@ export class CarritoService {
  }
 
  valorar(){
- 	
 	return this.total;
+ }
+
+ vaciar (){
+  	this.total=0;
+ 	this.carrito=[];
  }
 
 }

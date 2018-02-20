@@ -24,12 +24,13 @@ export class ProductosComponent {
 
   	}
   	this.CarritoService.addCarrito(productoAdd);
-    
+
   }
   onChage( event: number ){
+
    	this.totalCarritop.emit(event);
   }
-
+  
   
   ngOnInit() {
      this.httpS.getProductos()
