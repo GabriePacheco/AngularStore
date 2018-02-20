@@ -19,7 +19,7 @@ import { HttpService } from './http.service';
 export const appRoutes : Routes=[
   {path: "", component: LoginComponent},
   {path: "main", component: MainComponent},
-  {path: "item", component: ItemComponent},
+  {path: "item/:name", component: ItemComponent},
   {path: "carrito", component: CarritoComponent}
 ];
 

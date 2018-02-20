@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CarritoService {
- private carrito: string[] =[];
+ carrito: string[] =[];
+ total: number =0;
  addCarrito(producto){
  	this.carrito.push(producto);
- 	console.log(producto);
+ 	this.total += (producto.cantidad * producto.precio);
+ 	
  }
  contarCarrito(){
  	return this.carrito.length;
@@ -16,17 +18,8 @@ export class CarritoService {
  }
 
  valorar(){
- 	let total = 0;
-
- 	for (let i of this.carrito) {
-		i = JSON.stringify(i);
-	
-		console.log(i);
-	}
- 	return total;
-
+ 	
+	return this.total;
  }
-
-
 
 }

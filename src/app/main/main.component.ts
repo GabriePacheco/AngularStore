@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../carrito.service';
+import { HttpService  }  from '../http.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-main',
@@ -7,16 +9,23 @@ import { CarritoService } from '../carrito.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-
-  constructor(private carritoS: CarritoService) { }
+  productosFiltrados : any ;
+  constructor(private carritoS: CarritoService, private http: HttpService) { }
   totalCarritop:number;
   filtro:string;
   mostrar(){
   	this.totalCarritop = this.carritoS.contarCarrito();
   }
-  filtar(valor){
-  	console.log(valor);
-  	
+  filtrar(valor){
+    this.http.getProductos()
+    .subscribe((data:Response)=> {
+     let pro = JSON.parse(JSON.stringify(data) );
+       var productos =  pro.filter(producto => producto.nombre.toLowerCase().indexOf(valor.toLowerCase()) >-1) ; 
+       this.productosFiltrados = productos;
+    });
+    
+    
+    
   }
 
 

@@ -6,22 +6,22 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h3>Carrito de Compras</h3>
-					<div class="col-md-8">
+					<div class="col-md-8 ">
 						<div class="thumbnail" *ngFor="let car of carro">
 							<div class="row" >	
-								<div class="col-md-4">
+								<div class="col-md-4 col-ms-4 col-xs-4">
 									<img class="img-responsive " src="img/{{car.imagen}}">
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-8 col-ms-4 col-xs-4">
 									<h3>{{car.nombre}}</h3>
 									<p>Unidades : {{car.cantidad}}</p>
-									<p>SubTotal : {{car.precio * car.cantidad }}</p>
+									<p>SubTotal : {{car.precio * car.cantidad }} $</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="h3">Total: {{valor}}  </div>
+						<div class="h3">Total: {{valor}} $ </div>
 						<a routerLink ="/main" class="btn btn-default">Cancelar</a>
 						<a routerLink ="" class="btn btn-default" >Pagar</a>
 					</div>

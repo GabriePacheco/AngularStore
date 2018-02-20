@@ -1,6 +1,6 @@
 
 <div class="container-fluid "> 
 	<app-barra [tot]="totalCarritop + 1"></app-barra>
-	<app-buscador  (buscador) = "filtro = $event" ></app-buscador>
-	<app-productos (totalCarritop) = "mostrar()"></app-productos>
+	<app-buscador  (buscador) = "filtrar($event)" ></app-buscador>
+	<app-productos (totalCarritop) = "mostrar()" [productos]="productosFiltrados"></app-productos>
 </div>		

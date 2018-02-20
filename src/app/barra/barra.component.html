@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Pacheco's Store</a>
+      <a class="navbar-brand" routerLink="/main">Pacheco's Store</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,6 +17,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a routerLink="/main"><i class="glyphicon glyphicon-th"></i></a></li>
         <li><a routerLink="/carrito"><i class="glyphicon glyphicon-shopping-cart"></i> <span class="label label-danger" *ngIf="tot" >{{tot}}</span></a></li>
+        <li> <a class="navbar-brand" routerLink=""><i class="glyphicon glyphicon-log-out"></i></a></li>
        
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -14,7 +14,7 @@ export class BuscadorComponent  {
   }
 
   onBusqueda (value : string){
-  	this.buscador.emit(value);
+    this.buscador.emit(value);
   }
 
 

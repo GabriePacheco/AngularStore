@@ -2,26 +2,27 @@
 	<div class="panel panel-default">
 		<div class="panel-body"> 
 			<div class="row">
-				<div class="col-md-3" *ngFor="let prod of productos ">
-					<h3>{{prod.nombre}}</h3>
+			
+				<div class="col-md-3 col-sm-4" *ngFor="let prod of productos ">
+					<h3>{{prod.nombre}} </h3>
 					 <div class="thumbnail"> 
 						<div  >
 							<img  class="img-responsive img-rounded" src="img/{{prod.imagen}}"  >
 						</div>
 						<div >
 							
-							<p>Precio: <b >{{prod.precio}}</b></p>
-							<p>Unidades disponibles: <b>{{prod.stock}}</b></p>
+							<p>Precio: <b >{{prod.precio}}</b> $ </p>
+							<p>Unidades disponibles: <b>{{prod.stock}} </b></p>
 
 						</div>
 						<div class="row">
-							<div class="col-md-4"><a class="btn btn-default">Ver mas</a></div>
-							<div class="col-md-4"><a class="btn btn-info" (click)="add(id.value, nombre.value, imagen.value, precio.value, cantidad.value)" (mouseup)="onChage(cantidad.value)">Añadir</a></div>
+							<div class="col-md-4 col-sm-3"><a  routerLink="/item/{{prod.nombre}}" class="btn btn-default">Ver mas</a></div>
+							<div class="col-md-4 col-sm-3"><a class="btn btn-info" (click)="add(id.value, nombre.value, imagen.value, precio.value, cantidad.value)" (mouseup)="onChage(cantidad.value)">Añadir</a></div>
 							<input type="hidden" #id value="{{prod.id}}">
 							<input type="hidden" #nombre value="{{prod.nombre}}">
 							<input type="hidden" #imagen value="{{prod.imagen}}">
 							<input type="hidden" #precio value="{{prod.precio}}">
-							<div class="col-md-4"><input type="number" name="cantidad" class="form-control" value="1" #cantidad>	</div>
+							<div class="col-md-4 col-sm-6"><input type="number" name="cantidad" class="form-control" value="1" #cantidad>	</div>
 					</div>	
 					</div>
 				</div>
