@@ -10,5 +10,12 @@ export class HttpService {
 	  	.map((response: Response) => response.json());
 
 	  }
+	 getUsuarios (){
+	 	return this.http.get('https://webnexu-dfce4.firebaseio.com/usuarios/.json')
+	  	.map((response: Response) => response.json());
+	 } 
+
+
+
 
 	}
